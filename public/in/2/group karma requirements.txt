@@ -1,0 +1,38 @@
+We want to create a Groupon like site, but with the following modifications:
+- There are three user groups (the charity, the big donor, and the microdonor)
+- charities are the featured deal of the day
+- microdonors can lend to the charity anywhere from $1 up
+- the big donor is the featured donor. he/she doubles the current donation depending if the microdonors reach a certain level
+
+REQUIREMENTS: 
+1) Ability to post new donor deals with following info: deal info, end date/time, min/max order, discount
+2) Option to share the deal on Facebook, Twitter or per email’s list. 
+3) all log in via facebook connect
+3) Allow customers to create accounts (via facebook), sign-in, bid for deals, provide payment info
+4) Facilitate customers to sign-up for e-mail alert
+5) ability for users to retrieve all their donation records via their user profile
+6) Facilitate secure payment option with direct credit card transactions and Paypal
+7) Discussion board for users, forums
+8) About us, Contact us, How the site works sections ...
+9) User portal which can store information about donations given, karma points, payment info, etc
+10) ability to track a users "points", which they gain by buying a deal, tweeting a deal, sharing on facebook and referring others to the deal
+11) ability for users to use their "points" in order to purchase goods, which are set up through the admin website
+12) ability for buisness/charity to logon and send emails to their customers about the daily deal
+
+- One the side, the ability to post a ‘Featured Donor'. This featured donor post will contain information about our featured donor, including links and pictures of the product and daily prize giveaway
+- For each ‘Deal', a discussion page in which members can ask questions about the ‘Deal' and an administrator can login and answer questions for all members to see. 
+- The Featured Donor may log in and answer questions about the 'price package, new product' as well
+- The charity Donor may log in and answer questions about the 'Deal' as well
+
+ADMIN WEB CONSOLE AND RIGHTS:
+
+- Ability to control the site through an interface, with a secure login, so that an administrator can login remotely. 
+- Ability to create multiple administration accounts with different rights / privileges. 
+
+- Ability for an administrator to create a new ‘Donor Deal' for the category for which they have permission.
+- Ability to specify an start date / time, ending date / time, multiple purchasing levels (from $1 up)
+- Ability to view all members, their contact details, and donations given
+
+PREVIOUS DEALS: 
+- Ability to select certain old 'donor deals' to show on a “Prior Deals” page. 
+- For each expired ‘Deal', the ability to show the client's logo, the ‘Deal' offered, the number of coupons sold,

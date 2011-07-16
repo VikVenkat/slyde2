@@ -1,0 +1,32 @@
+<h1>Slyde It</h1> 
+<h2>Test Application</h2>
+Goal for this page: 
+<br>
+To let the user upload a file (Paperclip)
+<br>
+To have a model that has users able to have multiple files, and show them.
+<br>
+Easily upload a file, know its relation to user (Devise)
+<br>
+To create a randomized refrence, and make it sharable
+<br>
+decouple from my computer (git, heroku, S3)
+<br>
+Display the files on the web
+<br>
+<br>
+<br>
+<br>
+
+<%#= render 'form' %>
+
+<% form_for :deck, @deck, :url => decks_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :doc %>
+  <%= submit_tag value="Submit" %>
+<% end %>
+
+<br>
+<br>
+
+<%= link_to 'Decks', decks_path %>
+
