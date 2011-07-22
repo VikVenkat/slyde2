@@ -22,5 +22,13 @@ Slyde2::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  #Scribd settings
+  #Scribd::API.instance.key = '7apvr1oi5kl7o3epjxybi'
+  #Scribd::API.instance.secret = 'sec-b0k82gyxazrnaka0zlqnmnlz9a'
+
+  #Scribd_fu settings? Needed here? Also in environment.rb
+  #config.gem 'scribd_fu', :source => 'http://gemcutter.com'
+
 end
 

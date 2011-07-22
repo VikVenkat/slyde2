@@ -43,7 +43,12 @@ class DecksController < ApplicationController
   # POST /decks
   # POST /decks.xml
   def create
-    
+  #Amazon s3 Access
+  #AWS::S3::Base.establish_connection!(
+  #:access_key_id     => 'AKIAJETT5WWWOMFUITCQ',
+  #:secret_access_key => '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'
+  #)
+	
 	#for Paperclip
 	@deck = Deck.create(params[:deck])
 	@deck.viewcount = 0
@@ -55,7 +60,7 @@ class DecksController < ApplicationController
         format.html { redirect_to(@deck, :notice => 'Deck was successfully created.') }
         format.xml  { render :xml => @deck, :status => :created, :location => @deck }
       else
-        format.html { render :action => "new" }
+        format.html  { render :action => "new" }
         format.xml  { render :xml => @deck.errors, :status => :unprocessable_entity }
       end
     end

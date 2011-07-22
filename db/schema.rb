@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110716003758) do
+ActiveRecord::Schema.define(:version => 20110721203440) do
 
   create_table "decks", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,10 @@ ActiveRecord::Schema.define(:version => 20110716003758) do
     t.integer  "doc_file_size"
     t.datetime "doc_updated_at"
     t.integer  "viewcount"
+    t.integer  "scribd_id"
+    t.string   "scribd_access_key"
+    t.integer  "ipaper_id"
+    t.string   "ipaper_access_key"
   end
 
 end

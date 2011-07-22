@@ -10,8 +10,14 @@ gem 'sqlite3'
 gem 'paperclip'
 
 gem 'rscribd'
+gem 'scribd_fu'
+#, :git => 'git://github.com/ProtectedMethod/scribd_fu.git'
 
+#Use Heroku web server
 gem 'heroku'
+
+#Use Amazon file storage
+gem 'aws-s3', :require => 'aws/s3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -27,7 +33,8 @@ gem 'heroku'
 # gem 'bj'
 # gem 'nokogiri'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
+
+ 
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

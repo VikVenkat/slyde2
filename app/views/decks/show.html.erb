@@ -6,15 +6,12 @@
 </p>
   <b>Current Attachment:</b>
   <%= image_tag @deck.doc.url(:thumb) %>
-  <%= puts @deck.doc_file_name %>
-<h2>Attach Deck with Paperclip</h2>
-<% form_for :deck, @deck, :url => decks_path, :html => { :multipart => true } do |form| %>
+  <%= @deck.doc_file_name %>
+
   
-  <%= form.file_field :doc %>
-  <%= submit_tag value="Submit" %>
-<% end %>
 
-
-
+  <h2>View Doc using Scribd_fu</h2>
+  <%#= display_scribd(@deck) %>
+  
 <%= link_to 'Edit', edit_deck_path(@deck) %> |
 <%= link_to 'Back', decks_path %>
