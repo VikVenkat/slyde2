@@ -11,7 +11,7 @@
   
 
   <h2>View Doc using Scribd_fu</h2>
-  <%#= display_scribd(@deck) %>
+  <%= raw @deck.display_ipaper %>
   
 <%= link_to 'Edit', edit_deck_path(@deck) %> |
 <%= link_to 'Back', decks_path %>
