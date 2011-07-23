@@ -1,0 +1,17 @@
+  <h2>View Deck using Scribd reader</h2>
+
+<script type='text/javascript' src='http://www.scribd.com/javascripts/view.js'></script>
+
+<div id='embedded_flash'><a href="http://www.scribd.com">Scribd</a></div>
+
+<script type="text/javascript">
+var scribd_doc = scribd.Document.getDoc( 60203009, '7apvr1oi5kl7o3epjxybi' );
+
+var oniPaperReady = function(e){
+// scribd_doc.api.setPage(3);
+}
+
+scribd_doc.addParam( 'jsapi_version', 1 );
+scribd_doc.addEventListener( 'iPaperReady', oniPaperReady );
+scribd_doc.write( 'embedded_flash' );
+</script>
