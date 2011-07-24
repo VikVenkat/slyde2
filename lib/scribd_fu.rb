@@ -307,6 +307,7 @@ module ScribdFu
         <div id="embedded_flash#{id}">#{options.delete(:alt)}</div>
         <script type="text/javascript">
           var scribd_doc = scribd.Document.getDoc(#{ipaper_id}, '#{ipaper_access_key}');
+
           #{js_params(options)}
           scribd_doc.write("embedded_flash#{id}");
         </script>

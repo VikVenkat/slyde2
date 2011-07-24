@@ -14,7 +14,13 @@ class DecksController < ApplicationController
   # GET /decks/1
   # GET /decks/1.xml
   def show
-    @deck = Deck.find(params[:id])
+	
+	if params[:random]
+		then
+		@deck = Deck.find_by_random(params[:random])
+		else
+		@deck = Deck.find(params[:id])
+	end
 
 	@deck.viewcount += 1
 	@deck.save
@@ -41,8 +47,21 @@ class DecksController < ApplicationController
     @deck = Deck.find(params[:id])
   end
 
+  #We need these to clean spaces and randomize the URL (but then placed in model)
+#  def randomize
+#    @deck.random = rand(36**8).to_s(36)
+	
+#	until @deck.random 
+  
+  def cleanup_name
+  	@deck.name = @deck.doc_file_name.gsub(' ', '_')
+	@deck.doc_file_name = @deck.randomize
+  end
+  
+  
   # POST /decks
   # POST /decks.xml
+
   def create
   #Amazon s3 Access
   #AWS::S3::Base.establish_connection!(
@@ -50,15 +69,13 @@ class DecksController < ApplicationController
   #:secret_access_key => 'h6khH304Eb/VEqs4DujJ6VfsI0kzYuUsnCXw7U+0'
   #)
 	
-	#temp_name = @deck.doc_file_name
-	#@deck.doc_file_name = temp_name.gsub(' ', '_')
 	
 	#for Paperclip
 	@deck = Deck.create(params[:deck])
 	@deck.viewcount = 0
 	
+	
 	#@deck = Deck.new(params[:deck])
-
 	
     respond_to do |format|
       if @deck.save

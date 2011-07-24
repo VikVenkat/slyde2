@@ -1,20 +1,10 @@
-<%= image_tag 'Slyde_logo.jpg', :width => "300px"%>
+<%= image_tag 'Slyde_logo.jpg', :width => "100px"%>
 <br>
 <br>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @deck.name %>
-</p>
-  <b>Current Attachment:</b>
-  <%#= image_tag @deck.doc.url(:thumb) %>
-  <%= @deck.doc_file_name %>
-
-  
-
-  <h2>View Doc using Scribd_fu</h2>
   <%= raw @deck.display_ipaper %>
   
 <%= link_to 'Edit', edit_deck_path(@deck) %> |
-<%= link_to 'Back', decks_path %>
+<%= link_to 'Back', decks_path %> |
+<%= link_to 'Home', root_path %>

@@ -5,30 +5,34 @@
 
 <table>
   <tr>
-    <th>Name</th>
     <th></th>
-    <th></th>
-    <th></th>
+	<th>ID</th>
+    <th>File Name</th>
+    <th>Views</th>
+	<th>URL</th>
+	<th></th>
+	<th></th>
   </tr>
 
 <% @decks.each do |deck| %>
   <tr>
-    <td><%= deck.name %></td>
-	<td><%= deck.id %></td>
+    <td><%#= deck.name %></td>
+	<td>Deck ID <%= deck.id %></td>
 	<td><%= deck.doc_file_name %></td>
-	<td><%#= deck.ipaper_id %></td>
-	<td><%#= deck.ipaper_access_key %></td>
 	<td><%= deck.viewcount %> views</td>
+	<td>http://slyde.it/in/<%= deck.random %></td>
+	<td><%#= deck.ipaper_id %></td>
+	<td><%#= deck.ipaper_access_key %></td>	
 	<td><%#= deck.doc_file_size %></td>
 	
-    <td><%= link_to 'Show', deck %></td>
+    <td><%= link_to 'View', deck %></td>
     <td><%= link_to 'Edit', edit_deck_path(deck) %></td>
-    <td><%= link_to 'Destroy', deck, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Kill', deck, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Deck', new_deck_path %>
+<%= link_to 'New Deck', new_deck_path %> |
 <%= link_to 'Home', root_path %>
