@@ -50,8 +50,8 @@ class DecksController < ApplicationController
   #:secret_access_key => 'h6khH304Eb/VEqs4DujJ6VfsI0kzYuUsnCXw7U+0'
   #)
 	
-	temp_name = @deck.doc_file_name
-	@deck.doc_file_name = temp_name.gsub(' ', '_')
+	#temp_name = @deck.doc_file_name
+	#@deck.doc_file_name = temp_name.gsub(' ', '_')
 	
 	#for Paperclip
 	@deck = Deck.create(params[:deck])
