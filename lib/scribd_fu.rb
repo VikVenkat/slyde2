@@ -308,6 +308,15 @@ module ScribdFu
         <script type="text/javascript">
           var scribd_doc = scribd.Document.getDoc(#{ipaper_id}, '#{ipaper_access_key}');
 
+		  
+		  var oniPaperReady = function(e){
+			// scribd_doc.api.setPage(3);
+			}
+
+			scribd_doc.addParam( 'jsapi_version', 1 );
+			scribd_doc.addEventListener( 'iPaperReady', oniPaperReady );
+
+
           #{js_params(options)}
           scribd_doc.write("embedded_flash#{id}");
         </script>
