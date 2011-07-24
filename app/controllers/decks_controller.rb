@@ -50,12 +50,16 @@ class DecksController < ApplicationController
   #:secret_access_key => 'h6khH304Eb/VEqs4DujJ6VfsI0kzYuUsnCXw7U+0'
   #)
 	
+	temp_name = @deck.doc_file_name
+	@deck.doc_file_name = temp_name.gsub(' ', '_')
+	
 	#for Paperclip
 	@deck = Deck.create(params[:deck])
 	@deck.viewcount = 0
 	
 	#@deck = Deck.new(params[:deck])
 
+	
     respond_to do |format|
       if @deck.save
         format.html { redirect_to(@deck, :notice => 'Deck was successfully created.') }

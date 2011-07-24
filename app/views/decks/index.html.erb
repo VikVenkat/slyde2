@@ -1,3 +1,6 @@
+<%= image_tag 'Slyde_logo.jpg', :width => "300px"%>
+<br>
+<br>
 <h1>Listing decks</h1>
 
 <table>
@@ -13,8 +16,9 @@
     <td><%= deck.name %></td>
 	<td><%= deck.id %></td>
 	<td><%= deck.doc_file_name %></td>
-	<td><%= deck.ipaper_id %></td>
-	<td><%= deck.ipaper_access_key %></td>
+	<td><%#= deck.ipaper_id %></td>
+	<td><%#= deck.ipaper_access_key %></td>
+	<td><%= deck.viewcount %> views</td>
 	<td><%#= deck.doc_file_size %></td>
 	
     <td><%= link_to 'Show', deck %></td>
