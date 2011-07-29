@@ -47,17 +47,6 @@ class DecksController < ApplicationController
     @deck = Deck.find(params[:id])
   end
 
-  #We need these to clean spaces and randomize the URL (but then placed in model)
-#  def randomize
-#    @deck.random = rand(36**8).to_s(36)
-	
-#	until @deck.random 
-  
-  def cleanup_name
-  	@deck.name = @deck.doc_file_name.gsub(' ', '_')
-	@deck.doc_file_name = @deck.randomize
-  end
-  
   
   # POST /decks
   # POST /decks.xml

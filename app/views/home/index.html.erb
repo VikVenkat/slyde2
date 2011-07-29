@@ -1,14 +1,20 @@
-<%= image_tag 'Slyde_logo.jpg', :width => "300px"%>
-<br>
-<br>
+<center><%= image_tag 'Slyde_logo.png', :width => "400px"%>
 
+<h2>
+Share slides without sharing files.
+</h2>
+<br>
+Upload a file below and share the link with anyone you'd like. 
+<br>
+They can view the slides, but can't download it.
+<br><br><br><br>
 <%#= render 'form' %>
 
 <% form_for :deck, @deck, :url => decks_path, :html => { :multipart => true } do |form| %>
   <%= form.file_field :doc %>
   <%= submit_tag value="Submit" %>
 <% end %>
-
+</center>
 <br>
 <br>
 
