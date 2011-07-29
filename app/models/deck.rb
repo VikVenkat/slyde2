@@ -5,7 +5,7 @@ class Deck < ActiveRecord::Base
   validates_presence_of :random
   validates_uniqueness_of :random
 
-
+  before_save :clean_filename
 	
 	def init
 		viewcount = 0
@@ -31,5 +31,10 @@ class Deck < ActiveRecord::Base
   def before_validation
     self.random = rand(36**8).to_s(36) if self.new_record? and self.random.nil?
   end 
+  #note: Rails has this built in SecureRandom.hex(4) => makes an 8 digit random hex
 
+  def clean_filename
+     doc_file_name.gsub!(' ', '_')
+  end
+  
 end

@@ -1,0 +1,38 @@
+In Chrome:
+
+          <script type="text/javascript" src="http://www.scribd.com/javascripts/view.js"></script> 
+        <div id="embedded_flash"></div> 
+        <script type="text/javascript"> 
+          var scribd_doc = scribd.Document.getDoc(60804760, 'key-m7yd1auhxcs30kkmun0');
+          
+          scribd_doc.write("embedded_flash");
+        </script> 
+
+		
+In IE:
+          <script type="text/javascript" src="http://www.scribd.com/javascripts/view.js"></script>
+        <div id="embedded_flash"></div>
+        <script type="text/javascript">
+          var scribd_doc = scribd.Document.getDoc(60804760, 'key-m7yd1auhxcs30kkmun0');
+          
+          scribd_doc.write("embedded_flash");
+        </script>
+		
+Suggested:
+<script type='text/javascript' src='http://www.scribd.com/javascripts/view.js'></script>
+
+<div id='embedded_flash'><a href="http://www.scribd.com">Scribd</a></div>
+
+<script type="text/javascript">
+var scribd_doc = scribd.Document.getDoc( 2659, 'key-6vhdaqehjkeob' );
+
+var oniPaperReady = function(e){
+// scribd_doc.api.setPage(3);
+}
+
+scribd_doc.addParam( 'jsapi_version', 1 );
+scribd_doc.addEventListener( 'iPaperReady', oniPaperReady );
+scribd_doc.write( 'embedded_flash' );
+</script>
+
+		
