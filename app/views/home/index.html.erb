@@ -8,12 +8,23 @@ Upload a file below and share the link with anyone you'd like.
 <br>
 They can view the slides, but can't download it.
 <br><br><br><br>
-<%#= render 'form' %>
+	<%#= render 'form' %>
 
-<% form_for :deck, @deck, :url => decks_path, :html => { :multipart => true } do |form| %>
-  <%= form.file_field :doc %>
-  <%= submit_tag value="Submit" %>
+	<% form_for :deck, @deck, :url => decks_path, :html => { :multipart => true } do |form| %>
+	  <%= form.file_field :doc, :class => 'input_style' %>
+	  <%= submit_tag value="Submit", :class => 'btn' %>
+	  
+	<% end %>
+<br>
+<br>
+	<div id="deck">
+<% unless @deck.nil? %>
+	INITIAL URL TEXT TEST
+	<%#= render 'deck' %>
+	
 <% end %>
+	</div>
+	
 </center>
 <br>
 <br>

@@ -68,7 +68,15 @@ class DecksController < ApplicationController
 	
     respond_to do |format|
       if @deck.save
-        format.html { redirect_to(@deck, :notice => 'Deck was successfully created.') }
+        format.html { redirect_to root_path, :deck_id => @deck.id, 
+		# This used to just say @deck, changed for ajax
+		:notice => "Your deck can be viewed at http://slyde.it/in/#{@deck.random}" } 
+		  
+  
+		  
+  		#This is part of the ajax call
+		#format.js
+		
         format.xml  { render :xml => @deck, :status => :created, :location => @deck }
       else
         format.html  { render :action => "new" }

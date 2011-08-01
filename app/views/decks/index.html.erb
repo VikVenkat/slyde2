@@ -27,7 +27,7 @@
 	
     <td><%= link_to 'View', deck %></td>
     <td><%= link_to 'Edit', edit_deck_path(deck) %></td>
-    <td><%= link_to 'Kill', deck, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Kill', deck, :method => :delete %></td>
   </tr>
 <% end %>
 </table>

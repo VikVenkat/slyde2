@@ -1,0 +1,1 @@
+page.replace_html('deck', :partial => 'deck', :object => @deck)
