@@ -12,6 +12,7 @@ gem 'paperclip'
 gem 'rscribd'
 #gem 'scribd_fu', :git => 'git://github.com/ProtectedMethod/scribd_fu.git'
 
+gem 'devise'
 
 #Use Heroku web server
 gem 'heroku'

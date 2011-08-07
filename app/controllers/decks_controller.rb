@@ -3,8 +3,12 @@ class DecksController < ApplicationController
   # GET /decks
   # GET /decks.xml
   def index
-    @decks = Deck.all
+  #  This is the default
+  #  @decks = Deck.all
 
+  #  redefined for User control
+    @decks = Deck.visible_by(current_user)
+	
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @decks }
@@ -63,6 +67,10 @@ class DecksController < ApplicationController
 	@deck = Deck.create(params[:deck])
 	@deck.viewcount = 0
 	
+	#for Devise
+	if user_signed_in?
+	@deck.user_id = current_user.id
+	end
 	
 	#@deck = Deck.new(params[:deck])
 	

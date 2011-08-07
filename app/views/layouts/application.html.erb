@@ -7,15 +7,23 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
 <%= yield %>
 <center>
-<% if flash[:notice] %>
+	<% if flash[:notice] %>
       <p class="notice"><%= flash[:notice] %></p>
     <% end %>
-    <% if flash[:error] %>
+	<% if flash[:error] %>
       <p class="error"><%= flash[:error] %></p>
-<% end %>
+	<% end %>
+	<% if flash[:alert] %>
+      <p class="alert"><%= flash[:alert] %></p>
+	<% end %>
+	
 </center>
+<br>
+<ul class="hmenu">
+  <%= render 'devise/registration_items' %>
+  <%= render 'devise/login_items' %>
+</ul>
 </body>
 </html>

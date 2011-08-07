@@ -6,9 +6,20 @@ class Deck < ActiveRecord::Base
   validates_uniqueness_of :random
 
   before_save :clean_filename
+  
+  belongs_to :user
 	
 	def init
 		viewcount = 0
+	end
+	
+	# Devise
+	def self.visible_by(user)
+	  if user.is_admin
+		Deck.all
+	  else
+	    Deck.where :user_id => user.id
+	  end
 	end
 
 	# Paperclip
