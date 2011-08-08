@@ -2,10 +2,10 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-#trying to make heroku work
+#trying to make heroku work Uncomment the below for local
 #require 'lib/scribd_fu'
 
-require '#{Rails.root.to_s}/lib/scribd_fu'
+#require '#{Rails.root.to_s}/lib/scribd_fu'
 
 
 # If you have a Gemfile, require the gems listed there, including any gems
