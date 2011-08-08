@@ -29,5 +29,5 @@ They can view the slides, but can't download it.
 <br>
 <br>
 
-<%= link_to 'My Decks', decks_path %>
+<% if user_signed_in? %><%= link_to 'My Decks', decks_path %> <% end %>
 
