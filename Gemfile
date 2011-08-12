@@ -10,7 +10,7 @@ gem 'sqlite3'
 gem 'paperclip'
 
 gem 'rscribd'
-#gem 'scribd_fu', :git => 'git://github.com/ProtectedMethod/scribd_fu.git'
+gem 'scribd_fu', :git => "git://github.com/ProtectedMethod/scribd_fu.git"
 
 gem 'devise'
 

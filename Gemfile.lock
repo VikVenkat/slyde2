@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/ProtectedMethod/scribd_fu.git
+  revision: 98444ca51d32f9b1052f4b7b85686b3e4ef97561
+  specs:
+    scribd_fu (2.0.11)
+      rscribd
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -106,4 +113,5 @@ DEPENDENCIES
   paperclip
   rails (= 3.0.7)
   rscribd
+  scribd_fu!
   sqlite3
