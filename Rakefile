@@ -4,11 +4,7 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-module ::Slyde2  
-  class Application
-    include Rake::DSL
-  end
-end
+
 
 Slyde2::Application.load_tasks
 
