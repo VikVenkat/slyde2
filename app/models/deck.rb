@@ -28,9 +28,20 @@ class Deck < ActiveRecord::Base
 					#Previous URL format before trying random
 					#:url => "/in/:id/:basename.:extension",
 					:url => "/in/:id/:random",
-					:path => ":rails_root/public/in/:id/:basename.:extension"
+					:path => ":rails_root/public/in/:id/:basename.:extension",
+					:storage => :s3,
+					:bucket => 'Slyde',
+					:s3_credentials => {
+					  :access_key_id     => 'AKIAJETT5WWWOMFUITCQ',
+					  :secret_access_key => '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'
+					}
 					
-					
+  #Amazon s3 Access
+  #AWS::S3::Base.establish_connection!(
+  #:access_key_id     => 'AKIAJETT5WWWOMFUITCQ',
+  #:secret_access_key => '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'
+  #)
+
 
 	
 # The below was supposed to make scribd_fu work, but might be only rails 2, but works when scribd is local
