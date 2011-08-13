@@ -1,5 +1,9 @@
 
 class DecksController < ApplicationController
+
+include ActionView::Helpers::SanitizeHelper
+
+
   # GET /decks
   # GET /decks.xml
   def index
@@ -56,11 +60,6 @@ class DecksController < ApplicationController
   # POST /decks.xml
 
   def create
-  #Amazon s3 Access
-  #AWS::S3::Base.establish_connection!(
-  #:access_key_id     => 'AKIAJETT5WWWOMFUITCQ',
-  #:secret_access_key => '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'
-  #)
 	
 	
 	#for Paperclip
@@ -78,9 +77,9 @@ class DecksController < ApplicationController
       if @deck.save
         format.html { redirect_to root_path, :deck_id => @deck.id, 
 		# This used to just say @deck, changed for ajax
-		:notice => "Your deck can be viewed at http://slyde.it/in/#{@deck.random}" } 
+		:notice => sanitize("Your deck can be viewed at <a href='#{root_url}in/#{@deck.random}'>#{root_url}in/#{@deck.random} </a>" ) }
 		  
-  
+		#:notice => "Your deck can be viewed at http://slyde.it/in/#{@deck.random}" } 
 		  
   		#This is part of the ajax call
 		#format.js
